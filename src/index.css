@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+*{
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+.prime-txt{
+  font-family: "Poppins", sans-serif;
+}
+
+.navlink-underline-span{
+  position: absolute;
+  left: 0;
+  bottom: -3px;   /* distance from text */
+  height: 2px;
+  width: 0%;
+  border-radius: 2px;
+  background: #E85D04;
+}
+
+.bg-magic{
+  transition: all 0.5s ease-in-out;
+}
+.bg-magic-txt{
+  transition: all 0.3s ease-in-out;
+}
+.magic-arrow{
+  transition: all 0.3s ease-in-out;
+}
+.bg-magic-container:hover .bg-magic{
+  scale: 20;
+}
+.bg-magic-container:hover .bg-magic-txt{
+  color: black;
+  font-weight: 700;
+}
+.bg-magic-container:hover .magic-arrow{
+  rotate: 15deg;
+}
