@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom';
 import logo from "../../assets/logo.png"
-import {gsap} from 'gsap';
+import { gsap } from 'gsap';
 
 const Navbar = () => {
+
+    const lastScrollY = useRef(0);
 
     const navlinks = [
         {
@@ -55,10 +57,43 @@ const Navbar = () => {
             });
         });
 
+        gsap.from("#navbar", {
+            y: "-20vh",
+            duration: 1.5,
+            delay: 0.4,
+            ease: "power4.out",
+        })
+
+        const handleScroll = () => {
+            const currentScroll = window.scrollY;
+
+            if (currentScroll > lastScrollY.current && (currentScroll - lastScrollY.current) === 5) {
+
+                gsap.to("#navbar", {
+                    y: "-100%",
+                    duration: 0.4,
+                    ease: "power3.out",
+                });
+
+            } else if(currentScroll < lastScrollY.current && (lastScrollY.current - currentScroll) === 5) {
+
+                gsap.to("#navbar", {
+                    y: "0%",
+                    duration: 0.4,
+                    ease: "power3.out",
+                });
+            }
+
+            lastScrollY.current = currentScroll;
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+
     }, []);
 
     return (
-        <div className='w-full h-[15vh] flex justify-between items-center backdrop-blur-md bg-[#ffffff17] sticky top-0 left-0 z-[999] px-10' id='Navbar'>
+        <div className='w-full h-[15vh] flex justify-between items-center backdrop-blur-lg bg-[#ffffff17] sticky top-0 left-0 z-[999] px-10' id='navbar'>
             <div className='w-[250px]' id="logo">
                 <img className='w-full object-cover' src={logo} alt="" />
             </div>

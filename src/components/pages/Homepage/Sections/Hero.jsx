@@ -10,7 +10,7 @@ import 'swiper/css/effect-creative';
 
 import lead_min from "../../../../assets/3d/lead_min.png";
 import web_min from "../../../../assets/3d/web_min.png";
-import adv_min from "../../../../assets/3d/adv_min.png";
+import adv from "../../../../assets/3d/marketing3.png";
 
 const Hero = () => {
     return (
@@ -31,6 +31,7 @@ const Hero = () => {
                     },
                 }}
                 loop={true}
+                speed={500}
                 autoplay={{
                     delay: 5000,
                     disableOnInteraction: false,
@@ -61,7 +62,7 @@ const Hero = () => {
                         <p className='text-[1.050rem] leading-none tracking-tight font-semibold mt-5'>Deliver Quality Impression & Engagement With World Class Technology Resources.</p>
                     </div>
                     <div className="right-slide w-[40%] flex justify-center items-center">
-                        <img className='w-full object-cover' src={adv_min} alt="" />
+                        <img className='w-full object-cover' src={adv} alt="" />
                     </div>
                 </SwiperSlide>
             </Swiper>

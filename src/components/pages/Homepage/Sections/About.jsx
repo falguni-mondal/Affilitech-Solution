@@ -3,13 +3,12 @@ import React, { useEffect } from 'react'
 import services from "../../../../assets/Icons/services.png";
 import campaigns from "../../../../assets/Icons/campaigns.png";
 import years from "../../../../assets/Icons/years.png";
-import service from "../../../../assets/3d/service.png";
 import office from "../../../../assets/office_min.webp"
 import office2 from "../../../../assets/office2_min.webp"
 import { Link } from 'react-router-dom';
 
 import { MdArrowOutward } from "react-icons/md";
-import {gsap} from 'gsap';
+import { gsap } from 'gsap';
 
 
 const About = () => {
@@ -45,66 +44,78 @@ const About = () => {
             }
         });
 
-        gsap.from(".overviews-container", {
-            x: 50,
-            opacity: 0,
-            duration: 1,
+        gsap.to(".parallax-img", {
+            yPercent: 40,
+            ease: "none",
             scrollTrigger: {
-                trigger: ".overviews-container",
-                start: "top 85%",
-                end: "bottom 70%",
-            }
+                trigger: ".parallax-img",
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1,
+            },
         });
+
+        gsap.to(".parallax-img2", {
+            yPercent: -40,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".parallax-img2",
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1,
+            },
+        });
+
     }, []);
 
     return (
         <section className='w-full mt-20 px-10' id='about-section'>
             <div className="top-about w-full flex justify-between">
-                <h2 className='text-[3rem] font-semibold leading-none tracking-tight'><span className='block p-0 m-0 text-[5rem] font-semibold leading-[3rem] tracking-tight prime-txt'>About</span> our company.</h2>
+                <h2 className='text-[3rem] font-semibold leading-none tracking-tight'><span className='block p-0 m-0 text-[5rem] font-semibold leading-[3rem] tracking-tight prime-txt'>#About</span> our company.</h2>
                 <div className="about-text w-1/2 text-zinc-700 text-[1.1rem] font-medium">
                     <p className='mb-3'>
-                        <div className="about-line-container h-fit overflow-hidden">
+                        <span className="about-line-container block h-fit overflow-hidden">
                             <span className="block about-text-line">
                                 We help businesses grow smarter with modern affiliate strategies and
                             </span>
-                        </div>
-                        <div className="about-line-container h-fit overflow-hidden">
+                        </span>
+                        <span className="about-line-container block h-fit overflow-hidden">
                             <span className="block about-text-line">
                                 digital solutions. From lead generation and web development to mobile
                             </span>
-                        </div>
-                        <div className="about-line-container h-fit overflow-hidden">
+                        </span>
+                        <span className="about-line-container block h-fit overflow-hidden">
                             <span className="block about-text-line">
                                 advertisements, our focus is on delivering measurable results and long-
                             </span>
-                        </div>
-                        <div className="about-line-container h-fit overflow-hidden">
+                        </span>
+                        <span className="about-line-container block h-fit overflow-hidden">
                             <span className="block about-text-line">
                                 term value.
                             </span>
-                        </div>
+                        </span>
                     </p>
                     <p>
-                        <div className="about-line-container h-fit overflow-hidden">
+                        <span className="about-line-container block h-fit overflow-hidden">
                             <span className="block about-text-line">
                                 We believe in quality, transparency, and innovation — ensuring that
                             </span>
-                        </div>
-                        <div className="about-line-container h-fit overflow-hidden">
+                        </span>
+                        <span className="about-line-container block h-fit overflow-hidden">
                             <span className="block about-text-line">
                                 every campaign not only boosts visibility but also builds trust with your
                             </span>
-                        </div>
-                        <div className="about-line-container h-fit overflow-hidden">
+                        </span>
+                        <span className="about-line-container block h-fit overflow-hidden">
                             <span className="block about-text-line">
                                 audience. Whether you are a startup or an established brand, our
                             </span>
-                        </div>
-                        <div className="about-line-container h-fit overflow-hidden">
+                        </span>
+                        <span className="about-line-container block h-fit overflow-hidden">
                             <span className="block about-text-line">
                                 tailored services are designed to take your business to the next level.
                             </span>
-                        </div>
+                        </span>
                     </p>
                 </div>
             </div>
@@ -151,11 +162,11 @@ const About = () => {
                     </li>
                 </ul>
                 <div className="image-container w-[65%] flex justify-between">
-                    <div className="magic-img-container w-[350px] h-[350px] overflow-hidden">
-                        <img className='w-full h-full object-cover hover:scale-[1.1] transition-all duration-500 ease-in-out' src={office2} alt="" />
+                    <div className="magic-img-container w-[350px] h-[350px] overflow-hidden parallax-img">
+                        <img className='w-full h-full object-cover hover:scale-[1.1] transition-all duration-500 ease-in-out' src={office2} alt="" data-lenis-speed="5" />
                     </div>
-                    <div className="magic-img-container w-[400px] h-[450px] overflow-hidden">
-                        <img className='w-full h-full object-cover hover:scale-[1.1] transition-all duration-500 ease-in-out' src={office} alt="" />
+                    <div className="magic-img-container w-[400px] h-[450px] overflow-hidden parallax-img2">
+                        <img className='w-full h-full object-cover hover:scale-[1.1] transition-all duration-500 ease-in-out' src={office} alt="" data-lenis-speed="3" />
                     </div>
                 </div>
             </div>

@@ -41,5 +41,5 @@ html, body{
   font-weight: 700;
 }
 .bg-magic-container:hover .magic-arrow{
-  rotate: 15deg;
+  rotate: 20deg;
 }
