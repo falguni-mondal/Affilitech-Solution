@@ -71,11 +71,11 @@ const BrandMarquees = () => {
         }
 
         const handleScroll = () => {
-            [tl1, tl2, tl3].forEach((tl) => tl && tl.timeScale(2));
+            [tl1, tl2, tl3].forEach((tl) => tl && tl.timeScale(3));
             clearTimeout(window.scrollEndTimer);
             window.scrollEndTimer = setTimeout(() => {
                 [tl1, tl2, tl3].forEach((tl) => tl && tl.timeScale(1));
-            }, 500);
+            });
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -83,11 +83,11 @@ const BrandMarquees = () => {
     }, []);
 
     return (
-        <section className="w-full overflow-hidden py-10 px-10 space-y-6 mt-[15vh]" id="brand-marquee-section">
+        <section className="w-full overflow-hidden py-10 px-10 space-y-6 mt-[5vh]" id="brand-marquee-section">
             <h2 className='text-[3rem] font-semibold leading-none tracking-tight mb-[3vh]'><span className='block p-0 m-0 text-[5rem] font-semibold leading-[3rem] tracking-tight prime-txt'>#Trust</span> matters.</h2>
 
             <div className="flex space-x-10 whitespace-nowrap" ref={marquee1}>
-                {[...brands[0], ...brands[0]].map(
+                {[...brands[0], ...brands[0], ...brands[0], ...brands[0]].map(
                     (brand, i) => (
                         <img
                             key={i}
@@ -100,7 +100,7 @@ const BrandMarquees = () => {
             </div>
 
             <div className="flex space-x-10 whitespace-nowrap" ref={marquee2}>
-                {[...brands[1], ...brands[1]].map(
+                {[...brands[1], ...brands[1], ...brands[1], ...brands[1]].map(
                     (brand, i) => (
                         <img
                             key={i}
@@ -113,7 +113,7 @@ const BrandMarquees = () => {
             </div>
 
             <div className="flex space-x-10 whitespace-nowrap" ref={marquee3}>
-                {[...brands[2], ...brands[2]].map(
+                {[...brands[2], ...brands[2], ...brands[2], ...brands[2]].map(
                     (brand, i) => (
                         <img
                             key={i}

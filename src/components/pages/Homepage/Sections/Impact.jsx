@@ -7,22 +7,26 @@ const Impact = () => {
         {
             target: 3,
             label: "Years of Experience.",
-            suffix: "+"
+            suffix: "+",
+            duration: 0.8
         },
         {
             target: 80,
             label: "Daily Conversions",
-            suffix: "+"
+            suffix: "+",
+            duration: 2
         },
         {
             target: 1300,
             label: "Publishers",
-            suffix: "+"
+            suffix: "+",
+            duration: 2
         },
         {
             target: 10,
             label: "Monthly Traffic",
-            suffix: "M+"
+            suffix: "M+",
+            duration: 1
         }
     ]
 
@@ -45,8 +49,8 @@ const Impact = () => {
 
             <div className="impacts w-full flex justify-between mt-[5vh]">
                 {
-                    impacts.map(({ target, label, suffix }) => (
-                        <StatCounter target={target} label={label} suffix={suffix} />
+                    impacts.map(({ target, label, suffix, duration }) => (
+                        <StatCounter target={target} label={label} suffix={suffix} duration={duration} />
                     ))
                 }
             </div>

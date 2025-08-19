@@ -37,7 +37,7 @@ html, body{
   scale: 20;
 }
 .bg-magic-container:hover .bg-magic-txt{
-  color: black;
+  color: white;
   font-weight: 700;
 }
 .bg-magic-container:hover .magic-arrow{

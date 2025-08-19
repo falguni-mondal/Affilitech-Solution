@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const StatCounter = ({
   target,
-  duration = 2,
+  duration,
   label,
   suffix,
   radius = 100,
