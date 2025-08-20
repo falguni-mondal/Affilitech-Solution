@@ -10,7 +10,7 @@ const Contact = () => {
         <section className='w-full mt-[20vh] bg-zinc-200 p-10 rounded-3xl' id='contact-section'>
             <div className="flex justify-between mt-10 w-full">
                 <div className="left-contact w-[40%]">
-                    <h2 className='text-[3rem] font-semibold leading-none tracking-tight'>Lets<span className='block p-0 m-0 text-[5rem] font-semibold leading-[5rem] tracking-tight prime-txt'>#Talk</span></h2>
+                    <h2 className='text-[3rem] font-semibold leading-none tracking-tight mb-3'>Lets<span className='block p-0 m-0 text-[5rem] font-semibold leading-[5rem] tracking-tight prime-txt'>#Talk</span></h2>
                     <div className="contact-txt mb-3">
                         feel free to connect with us. We believe that
                         communication always leads to better outcomes and

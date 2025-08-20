@@ -155,9 +155,9 @@ const About = () => {
                         </div>
                     </li>
                     <li className='mt-14'>
-                        <Link className='bg-magic-container w-fit text-zinc-900 text-[1.2rem] tracking-tight font-semibold flex items-center gap-1' to="/about">
-                            <p className='px-10 hover:px-11 transition-all duration-500 h-[55px] rounded-full bg-[#f0550d] flex items-center relative overflow-hidden'><span className='relative bg-magic-txt z-[100]'>About Affilitech</span><span className='bg-magic block absolute bg-black rounded-full w-[50px] h-[50px] top-[-10px] left-[-10px] -translate-x-[50%] -translate-y-[50%] z-[99]'></span></p>
-                            <span className='w-[55px] h-[55px] rounded-full bg-[#f0550d] flex justify-center items-center magic-arrow'><MdArrowOutward className='text-[1.8rem]' /></span>
+                        <Link className='bg-magic-container w-fit text-black text-[1.2rem] tracking-tight font-semibold flex items-center gap-1' to="/about">
+                            <p className='px-10 hover:px-11 transition-all duration-500 h-[55px] rounded-full bg-[#ff5d11] flex items-center relative overflow-hidden'><span className='relative bg-magic-txt z-[100]'>About Affilitech</span><span className='bg-magic block absolute bg-black rounded-full w-[50px] h-[50px] top-[-10px] left-[-10px] -translate-x-[50%] -translate-y-[50%] z-[99]'></span></p>
+                            <span className='w-[55px] h-[55px] rounded-full bg-[#ff5d11] flex justify-center items-center magic-arrow'><MdArrowOutward className='text-[1.8rem]' /></span>
                         </Link>
                     </li>
                 </ul>

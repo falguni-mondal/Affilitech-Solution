@@ -37,8 +37,8 @@ const Testimonials = () => {
                     className="w-[70%] h-[40vh]"
                     speed={1000}
                     autoplay={{
-                        delay: 4000,
-                        disableOnInteraction: true,
+                        delay: 3000,
+                        disableOnInteraction: false,
                     }}
                 >
                     <SwiperSlide className='bg-[#fff8b08a] backdrop-blur-lg px-10 py-5 rounded-3xl text-[1.5rem] leading-tight'>

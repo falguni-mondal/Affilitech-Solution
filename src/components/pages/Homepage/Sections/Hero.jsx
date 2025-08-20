@@ -1,3 +1,5 @@
+import { useEffect, useRef } from 'react';
+
 import { Navigation, EffectCreative, Autoplay } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -13,10 +15,28 @@ import web_min from "../../../../assets/3d/web_min.png";
 import adv from "../../../../assets/3d/marketing3.png";
 
 const Hero = () => {
+
+    const swiperRef = useRef(null);
+    const firstTime = useRef(true);
+
+    useEffect(() => {
+        if (swiperRef.current) {
+            const swiper = swiperRef.current.swiper;
+
+            swiper.params.autoplay.delay = 8300;
+
+            swiper.on("slideChange", () => {
+                if (firstTime.current) {
+                    swiper.params.autoplay.delay = 5000;
+                    firstTime.current = false;
+                }
+            });
+        }
+    }, []);
+
     return (
         <section className='w-full block mt-1 relative' id='hero-section'>
             <Swiper
-                // install Swiper modules
                 modules={[Navigation, EffectCreative, Autoplay]}
                 slidesPerView={1}
                 navigation
@@ -33,32 +53,33 @@ const Hero = () => {
                 loop={true}
                 speed={500}
                 autoplay={{
-                    delay: 5000,
+                    delay: 8300,
                     disableOnInteraction: false,
                 }}
+                ref={swiperRef}
                 className='rounded-3xl w-full h-[83vh]'
             >
-                <SwiperSlide className='hero-slide w-full h-full rounded-3xl bg-[#fffac7] px-10' style={{display: "flex"}}>
+                <SwiperSlide className='hero-slide w-full h-full rounded-3xl bg-[#fffac7] px-10' style={{ display: "flex" }}>
                     <div className="left-slide w-[60%] h-full flex flex-col justify-center shrink-0">
-                        <h1 className='prime-txt text-[4.5rem] leading-none tracking-tight font-bold'><span className='block prime-txt text-[12rem] leading-none tracking-tighter font-bold text-[#ff7221]'>Leading</span> Digital Marketing Agency.</h1>
+                        <h1 className='prime-txt text-[4.5rem] leading-[4.2rem] tracking-tight font-bold'><span className='block prime-txt text-[12rem] leading-none tracking-tighter font-bold text-[#ff7221]'>Leading</span> Digital Marketing Agency.</h1>
                         <p className='text-[1.1rem] leading-none tracking-tight font-semibold mt-5'>We Provide Cutting Edge Business Solution In Digital & Performance Marketing.</p>
                     </div>
                     <div className="right-slide w-[40%] flex justify-center items-center">
                         <img className='w-full object-cover' src={lead_min} alt="" />
                     </div>
                 </SwiperSlide>
-                <SwiperSlide className='hero-slide w-full h-full rounded-3xl bg-[#adebb3] px-10' style={{display: "flex"}}>
+                <SwiperSlide className='hero-slide w-full h-full rounded-3xl bg-[#adebb3] px-10' style={{ display: "flex" }}>
                     <div className="left-slide w-[60%] h-full flex flex-col justify-center shrink-0">
-                        <h1 className='prime-txt text-[4.5rem] leading-none tracking-tight font-bold'><span className='block prime-txt text-[10rem] leading-none tracking-tighter font-bold text-[#28c22f]'>Website</span> Development Services.</h1>
+                        <h1 className='prime-txt text-[4.5rem] leading-[4.2rem] tracking-tight font-bold'><span className='block prime-txt text-[10rem] leading-none tracking-tighter font-bold text-[#28c22f]'>Website</span> Development Services.</h1>
                         <p className='text-[1.1rem] leading-none tracking-tight font-semibold mt-5'>Foremost Web Application Building, Focus on Unique Ideas.</p>
                     </div>
                     <div className="right-slide w-[40%] flex justify-center items-center">
                         <img className='w-full object-cover' src={web_min} alt="" />
                     </div>
                 </SwiperSlide>
-                <SwiperSlide className='hero-slide w-full h-full rounded-3xl bg-[#d0d5ff] px-10' style={{display: "flex"}}>
+                <SwiperSlide className='hero-slide w-full h-full rounded-3xl bg-[#d0d5ff] px-10' style={{ display: "flex" }}>
                     <div className="left-slide w-[60%] h-full flex flex-col justify-center shrink-0">
-                        <h1 className='prime-txt text-[4.5rem] leading-none tracking-tight font-bold'><span className='block prime-txt text-[12rem] leading-none tracking-tighter font-bold text-[#6625ff]'>Mobile</span> Advertising Sollutions.</h1>
+                        <h1 className='prime-txt text-[4.5rem] leading-[4.2rem] tracking-tight font-bold'><span className='block prime-txt text-[12rem] leading-none tracking-tighter font-bold text-[#6625ff]'>Mobile</span> Advertising Sollutions.</h1>
                         <p className='text-[1.050rem] leading-none tracking-tight font-semibold mt-5'>Deliver Quality Impression & Engagement With World Class Technology Resources.</p>
                     </div>
                     <div className="right-slide w-[40%] flex justify-center items-center">

@@ -60,7 +60,7 @@ const Navbar = () => {
         gsap.from("#navbar", {
             y: "-20vh",
             duration: 1.5,
-            delay: 0.4,
+            delay: 3.4,
             ease: "power4.out",
         })
 
