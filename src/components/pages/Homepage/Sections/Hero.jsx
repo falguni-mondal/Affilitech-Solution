@@ -57,7 +57,7 @@ const Hero = () => {
                     disableOnInteraction: false,
                 }}
                 ref={swiperRef}
-                className='rounded-3xl w-full h-[83vh]'
+                className='rounded-3xl w-full h-[83vh] max-h-[]'
             >
                 <SwiperSlide className='hero-slide w-full h-full rounded-3xl bg-[#fffac7] px-10' style={{ display: "flex" }}>
                     <div className="left-slide w-[60%] h-full flex flex-col justify-center shrink-0">
