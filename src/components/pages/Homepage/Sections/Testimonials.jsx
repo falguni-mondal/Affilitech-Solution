@@ -26,7 +26,7 @@ const Testimonials = () => {
     }, [])
 
     return (
-        <section className='w-full mt-[-5vh] p-10 rounded-3xl overflow-hidden bg-zinc-200' id='testimonials-section'>
+        <section className='w-full mt-[-5vh] px-10 py-20 rounded-3xl overflow-hidden bg-zinc-200' id='testimonials-section'>
             <h2 className='text-[3rem] font-semibold leading-none tracking-tight'><span className='block p-0 m-0 text-[5rem] font-semibold leading-[5rem] tracking-tight prime-txt'>#Testimonials</span>that Define Our Credibility.</h2>
 
             <div className="testimonials w-full mt-10">

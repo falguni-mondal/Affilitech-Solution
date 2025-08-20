@@ -49,8 +49,8 @@ const Hero = () => {
                 </SwiperSlide>
                 <SwiperSlide className='hero-slide w-full h-full rounded-3xl bg-[#adebb3] px-10' style={{display: "flex"}}>
                     <div className="left-slide w-[60%] h-full flex flex-col justify-center shrink-0">
-                        <h1 className='prime-txt text-[4.5rem] leading-none tracking-tight font-bold'><span className='block prime-txt text-[10rem] leading-none tracking-tighter font-bold text-[#28c22f]'>App & Web</span> Development.</h1>
-                        <p className='text-[1.1rem] leading-none tracking-tight font-semibold mt-5'>Foremost Application Building, Focus on Unique Ideas.</p>
+                        <h1 className='prime-txt text-[4.5rem] leading-none tracking-tight font-bold'><span className='block prime-txt text-[10rem] leading-none tracking-tighter font-bold text-[#28c22f]'>Website</span> Development Services.</h1>
+                        <p className='text-[1.1rem] leading-none tracking-tight font-semibold mt-5'>Foremost Web Application Building, Focus on Unique Ideas.</p>
                     </div>
                     <div className="right-slide w-[40%] flex justify-center items-center">
                         <img className='w-full object-cover' src={web_min} alt="" />

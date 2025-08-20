@@ -17,18 +17,18 @@ const Contact = () => {
                         that is all we wish and work for our clients.
                     </div>
                     <div className="contact-links flex items-center gap-5">
-                        <p className='flex items-center gap-2 text-[1.2rem] font-medium'>Contact Us <HiArrowLongRight className='text-[2rem] text-[#f0550d]' /></p>
+                        <p className='flex items-center gap-2 text-[1.3rem] font-semibold'>Contact Us <HiArrowLongRight className='text-[2rem] text-[#f0550d]' /></p>
                         <div className="contact-links-container flex gap-2">
-                            <a className='w-[2rem] h-[2rem] border border-zinc-500 rounded-full flex justify-center items-center hover:bg-[#f0550d] transition-all duration-300' href="#" target='_blank'>
+                            <a className='w-[2rem] h-[2rem] border border-zinc-500 rounded-full flex justify-center items-center hover:bg-[#f0550d] hover:border-zinc-200 transition-all duration-300' href="#" target='_blank'>
                                 <FaFacebookF className='text-[1.2rem]' />
                             </a>
-                            <a className='w-[2rem] h-[2rem] border border-zinc-500 rounded-full flex justify-center items-center hover:bg-[#f0550d] transition-all duration-300' href="#" target='_blank'>
+                            <a className='w-[2rem] h-[2rem] border border-zinc-500 rounded-full flex justify-center items-center hover:bg-[#f0550d] hover:border-zinc-200 transition-all duration-300' href="#" target='_blank'>
                                 <FaXTwitter className='text-[1.2rem]' />
                             </a>
-                            <a className='w-[2rem] h-[2rem] border border-zinc-500 rounded-full flex justify-center items-center hover:bg-[#f0550d] transition-all duration-300' href="#" target='_blank'>
+                            <a className='w-[2rem] h-[2rem] border border-zinc-500 rounded-full flex justify-center items-center hover:bg-[#f0550d] hover:border-zinc-200 transition-all duration-300' href="#" target='_blank'>
                                 <FaLinkedinIn className='text-[1.2rem]' />
                             </a>
-                            <a className='w-[2rem] h-[2rem] border border-zinc-500 rounded-full flex justify-center items-center hover:bg-[#f0550d] transition-all duration-300' href="#" target='_blank'>
+                            <a className='w-[2rem] h-[2rem] border border-zinc-500 rounded-full flex justify-center items-center hover:bg-[#f0550d] hover:border-zinc-200 transition-all duration-300' href="#" target='_blank'>
                                 <FaInstagram className='text-[1.2rem]' />
                             </a>
                         </div>

@@ -12,7 +12,7 @@ const HomeMarquee = () => {
         "Quality Services"
     ]
     return (
-        <div className='w-full overflow-x-hidden uppercase font-semibold text-[1.4rem] bg-black text-zinc-300 mt-10 relative z-[99]' id='home-marquee'>
+        <div className='w-full overflow-x-hidden uppercase font-semibold text-[1.4rem] bg-black text-zinc-300 mt-5 relative z-[99]' id='home-marquee'>
             <Marquee speed={60} pauseOnHover gradient={false}>
                 {
                     titles.map(title => (

@@ -5,8 +5,8 @@ import Services from './Sections/Services/Services'
 import Impact from './Sections/Impact'
 import Testimonials from './Sections/Testimonials'
 import BrandMarquees from './Sections/BrandMarquees'
+import Playful from "./Sections/Playful"
 import PinMarquee from './Sections/PinMarquee'
-import Playful from './Sections/Playful'
 import Contact from './Sections/Contact'
 import Footer from './Sections/Footer'
 
@@ -20,7 +20,7 @@ const Homepage = () => {
         <Impact />
         <Testimonials />
         <BrandMarquees />
-        {/* <Playful /> */}
+        <Playful />
         <PinMarquee />
         <Contact />
         <Footer />
