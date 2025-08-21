@@ -29,9 +29,9 @@ export default function LoadingScreen({ onComplete }) {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 flex items-center justify-center bg-zinc-200 z-[9999]"
+      className="fixed inset-0 flex items-center justify-center bg-zinc-100 z-[9999]"
     >
-      <div className="relative w-[30vw] h-[30vw] flex flex-col items-center justify-center">
+      <div className="relative w-[90vw] h-[90vw] lg:w-[30vw] lg:h-[30vw] flex flex-col items-center justify-center">
         {/* --- TOP HALF (separate SVG) --- */}
         <svg
           className="w-full h-1/2"

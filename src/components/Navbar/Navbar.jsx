@@ -93,7 +93,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className='w-full h-[15vh] flex justify-between items-center bg-white sticky top-0 left-0 z-[999] px-10' id='navbar'>
+        <div className='w-full h-[15vh] hidden lg:flex justify-between items-center bg-white sticky top-0 left-0 z-[999] px-10' id='navbar'>
             <div className='w-[250px]' id="logo">
                 <img className='w-full object-cover' src={logo} alt="" />
             </div>

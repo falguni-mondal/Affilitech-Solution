@@ -12,7 +12,7 @@ import Footer from './Sections/Footer'
 
 const Homepage = () => {
   return (
-    <div className='w-full' id='homepage'>
+    <div className='w-full pt-3 px-3 lg:pt-0 lg:px-0' id='homepage'>
         <Hero />
         <HomeMarquee />
         <About />
