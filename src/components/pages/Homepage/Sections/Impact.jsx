@@ -50,7 +50,7 @@ const Impact = () => {
             <div className="impacts w-full flex flex-col lg:flex-row gap-3 lg:justify-between mt-[3vh] lg:mt-[5vh]">
                 {
                     impacts.map(({ target, label, suffix, duration }) => (
-                        <StatCounter target={target} label={label} suffix={suffix} duration={duration} />
+                        <StatCounter key={`${label}-key`} target={target} label={label} suffix={suffix} duration={duration} />
                     ))
                 }
             </div>

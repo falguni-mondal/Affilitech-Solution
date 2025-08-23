@@ -220,8 +220,8 @@ const About = () => {
                     </li>
                     <li className='mt-8 lg:mt-14'>
                         <button className='bg-magic-container w-fit text-black text-[1.1rem] lg:text-[1.2rem] lg:tracking-tight font-semibold flex items-center gap-1'>
-                            <p className='px-10 hover:px-11 transition-all duration-500 h-[55px] rounded-full bg-[#ff6b26] flex items-center relative overflow-hidden'><span className='relative bg-magic-txt z-[100]'>About Affilitech</span><span className='bg-magic block absolute bg-black rounded-full w-[50px] h-[50px] top-[-10px] left-[-10px] -translate-x-[50%] -translate-y-[50%] z-[99]'></span></p>
-                            <span className='w-[55px] h-[55px] rounded-full bg-[#ff6b26] flex justify-center items-center magic-arrow'><MdArrowOutward className='text-[1.8rem]' /></span>
+                            <p className='px-8 lg:px-10 hover:px-9 lg:hover:px-11 transition-all duration-500 h-[50px] lg:h-[55px] rounded-full bg-[#ff6411] flex items-center relative overflow-hidden text-[0.95rem] lg:text-[1rem]'><span className='relative bg-magic-txt z-[100]'>About Affilitech</span><span className='bg-magic block absolute bg-black rounded-full w-[50px] h-[50px] top-[-10px] left-[-10px] -translate-x-[50%] -translate-y-[50%] z-[99]'></span></p>
+                            <span className='w-[50px] lg:w-[55px] h-[50px] lg:h-[55px] rounded-full bg-[#ff6411] flex justify-center items-center magic-arrow'><MdArrowOutward className='text-[1.4rem] lg:text-[1.8rem]' /></span>
                         </button>
                     </li>
                 </ul>

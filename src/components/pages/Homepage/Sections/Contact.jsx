@@ -57,7 +57,7 @@ const Contact = () => {
                         <div className="inp-container w-full font-medium mt-3">
                             <textarea className='w-full py-1.5 border-b border-zinc-900 outline-0 resize-none placeholder:text-zinc-900' rows={6} id='msg-inp' placeholder='Write your message here'></textarea>
                         </div>
-                        <button className='px-20 py-3 rounded-full bg-[#f0550d] text-black font-semibold mt-3'>Send</button>
+                        <button className='px-16 lg:px-20 py-2.5 lg:py-3 rounded-full bg-[#FF6411] text-black font-semibold mt-3'>Send</button>
                     </form>
                 </div>
             </div>

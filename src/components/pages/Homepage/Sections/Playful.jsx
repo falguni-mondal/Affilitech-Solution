@@ -10,7 +10,7 @@ const Playful = () => {
 
   useEffect(() => {
     gsap.to("#playful-section", {
-      yPercent: -20,
+      yPercent: -40,
       ease: "none",
       scrollTrigger: {
         trigger: "#playful-section",
@@ -59,7 +59,7 @@ const Playful = () => {
           </span>
         </h2>
 
-        <div className="bg-black text-orange-400 px-4 lg:px-8 py-4 lg:py-8 rounded-full rounded-br-none font-bold text-[0.8rem] lg:text-[1.1rem] shadow-md select-none">
+        <div className="bg-black text-[#ff6411] px-4 lg:px-8 py-4 lg:py-8 rounded-full rounded-br-none font-bold text-[0.8rem] lg:text-[1.1rem] shadow-md select-none">
           {screenX >= 1024 ? "Hover" : "Tap"}
         </div>
       </div>

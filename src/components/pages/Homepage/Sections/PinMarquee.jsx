@@ -47,7 +47,7 @@ const PinMarquee = () => {
     >
       <h1
         ref={textRef}
-        className="text-[#ff631a] font-bold whitespace-nowrap text-[6rem] lg:text-[25rem]"
+        className="text-[#ff6411] font-bold whitespace-nowrap text-[6rem] lg:text-[25rem]"
       >
         Build. Grow. Succeed.
       </h1>

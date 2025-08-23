@@ -1,15 +1,17 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import LoadingScreen from './components/LoadingScreen/LoadingScreen'
 import Navbar from './components/Navbar/Navbar'
 import Router from './router/Router'
 import { IoMdArrowUp } from "react-icons/io";
 import { gsap } from 'gsap';
 import NavbarMobile from './components/Navbar/NavbarMobile';
+import MobileNavMenu from './components/Navbar/MobileNavMenu';
 // import SmoothScrolling from './components/utils/SmoothScrolling';
 // import Homepage from './components/pages/Homepage/Homepage';
 
 const App = () => {
   const topLinkRef = useRef(null);
+  const [navReveal, setNavReveal] = useState(false);
 
   useEffect(() => {
     if (topLinkRef.current) {
@@ -25,6 +27,7 @@ const App = () => {
         },
       })
     }
+
   }, [])
 
   return (
@@ -34,7 +37,8 @@ const App = () => {
       </div>
       <LoadingScreen />
       <Navbar />
-      <NavbarMobile />
+      <MobileNavMenu navReveal={navReveal} setNavReveal={setNavReveal} />
+      <NavbarMobile navReveal={navReveal} setNavReveal={setNavReveal} />
       <Router />
     </div>
   )

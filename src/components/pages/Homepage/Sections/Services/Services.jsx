@@ -44,48 +44,65 @@ const Services = () => {
                 end: "bottom 70%",
             }
         });
-        gsap.from(".masked-div", {
-            y: 150,
-            opacity: 0,
-            duration: 0.7,
-            stagger: 0.1,
-            scrollTrigger: {
-                trigger: ".masked-div",
-                start: "top 95%",
-                end: "bottom 70%",
-            }
-        });
-        gsap.from(".masked-div2", {
-            y: 150,
-            opacity: 0,
-            duration: 0.7,
-            stagger: 0.1,
-            scrollTrigger: {
-                trigger: ".masked-div2",
-                start: "top 95%",
-                end: "bottom 70%",
-            }
-        });
-        gsap.from(".masked-div3", {
-            y: 150,
-            opacity: 0,
-            duration: 0.7,
-            scrollTrigger: {
-                trigger: ".masked-div3",
-                start: "top 95%",
-                end: "bottom 70%",
-            }
-        });
-        gsap.from(".masked-div4", {
-            y: 150,
-            opacity: 0,
-            duration: 0.7,
-            scrollTrigger: {
-                trigger: ".masked-div4",
-                start: "top 95%",
-                end: "bottom 70%",
-            }
-        });
+        if (screenX >= 1024) {
+            gsap.from(".masked-div", {
+                y: 150,
+                opacity: 0,
+                duration: 0.7,
+                stagger: 0.1,
+                scrollTrigger: {
+                    trigger: ".masked-div",
+                    start: "top 95%",
+                    end: "bottom 70%",
+                }
+            });
+            gsap.from(".masked-div2", {
+                y: 150,
+                opacity: 0,
+                duration: 0.7,
+                stagger: 0.1,
+                scrollTrigger: {
+                    trigger: ".masked-div2",
+                    start: "top 95%",
+                    end: "bottom 70%",
+                }
+            });
+            gsap.from(".masked-div3", {
+                y: 150,
+                opacity: 0,
+                duration: 0.7,
+                scrollTrigger: {
+                    trigger: ".masked-div3",
+                    start: "top 95%",
+                    end: "bottom 70%",
+                }
+            });
+            gsap.from(".masked-div4", {
+                y: 150,
+                opacity: 0,
+                duration: 0.7,
+                scrollTrigger: {
+                    trigger: ".masked-div4",
+                    start: "top 95%",
+                    end: "bottom 70%",
+                }
+            });
+        }
+        else {
+            const maskedCard = document.querySelectorAll(".masked-card");
+            maskedCard.forEach(card => {
+                gsap.from(card, {
+                    y: 150,
+                    opacity: 0,
+                    duration: 0.7,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%",
+                        end: "top 75%",
+                    }
+                })
+            })
+        }
 
     }, [])
 
@@ -99,14 +116,14 @@ const Services = () => {
             <h2 className='text-[1.3rem] lg:text-[3rem] font-semibold leading-none tracking-tight mb-5 lg:mb-10'>Our<span className='block p-0 m-0 text-[2.5rem] lg:text-[5rem] font-semibold leading-none tracking-tight prime-txt'>#Services</span></h2>
             <div className="services-list-container w-full">
                 <div className="service-list-line w-full flex flex-col lg:flex-row gap-5 lg:gap-10">
-                    <MaskedDiv maskType="type-1" size={screenX >= 1024 ? 0.35 : 0.90} className='masked-div h-[48vh] lg:h-fit'>
+                    <MaskedDiv maskType="type-1" size={screenX >= 1024 ? 0.35 : 0.90} className='masked-div masked-card h-[48vh] lg:h-fit'>
                         <div className="service bg-[#acbbff] p-5">
                             <img className='w-[85%] lg:w-[90%] object-cover' src={marketing} alt="" />
                             <h1 className="text-[1.4rem] lg:text-[2rem] font-bold tracking-tight leading-none">Affiliate Marketing</h1>
                             <p className="text-[0.95rem] lg:text-[1rem] mt-3 font-medium leading-tight">With our vast network and experience of running campaigns, you get new affiliates and new source of revenue.</p>
                         </div>
                     </MaskedDiv>
-                    <MaskedDiv maskType="type-1" size={screenX >= 1024 ? 0.35 : 0.90} className='masked-div h-[48vh] lg:h-fit lg:rotate-180'>
+                    <MaskedDiv maskType="type-1" size={screenX >= 1024 ? 0.35 : 0.90} className='masked-div masked-card h-[48vh] lg:h-fit lg:rotate-180'>
                         <div className="service bg-[#DBC7FF] p-5 pt-7 flex flex-col-reverse lg:flex-col items-start lg:items-center justify-between lg:rotate-180">
                             <div className="service-dets">
                                 <h1 className="text-[1.4rem] lg:text-[2rem] font-bold tracking-tight leading-none">Web Development</h1>
@@ -115,7 +132,7 @@ const Services = () => {
                             <img className='w-[85%] lg:w-[90%] object-cover' src={web} alt="" />
                         </div>
                     </MaskedDiv>
-                    <MaskedDiv maskType="type-1" size={screenX >= 1024 ? 0.35 : 0.90} className='masked-div h-[48vh] lg:h-fit'>
+                    <MaskedDiv maskType="type-1" size={screenX >= 1024 ? 0.35 : 0.90} className='masked-div masked-card h-[48vh] lg:h-fit'>
                         <div className="service flex flex-col items-start lg:items-center bg-[#FFF8B0] p-5">
                             <img className='w-[80%] object-cover' src={seo} alt="" />
                             <div className="service-dets">
@@ -126,7 +143,7 @@ const Services = () => {
                     </MaskedDiv>
                 </div>
                 <div className="service-list-line flex flex-col lg:flex-row justify-between mt-5 lg:mt-10 gap-5 lg:gap-10">
-                    <MaskedDiv maskType={screenX >= 1024 ? "type-2" : "type-1"} size={screenX >= 1024 ? 0.50 : 0.90} className='masked-div2 h-[48vh] lg:h-fit'>
+                    <MaskedDiv maskType={screenX >= 1024 ? "type-2" : "type-1"} size={screenX >= 1024 ? 0.50 : 0.90} className='masked-div2 masked-card h-[48vh] lg:h-fit'>
                         <div className="service bg-[#ffd391] p-5 flex flex-col lg:flex-row justify-start lg:justify-between items-start lg:items-center">
                             <img className='w-[70%] lg:w-[40%] object-cover' src={email} alt="" />
                             <div className="service-dets">
@@ -135,7 +152,7 @@ const Services = () => {
                             </div>
                         </div>
                     </MaskedDiv>
-                    <MaskedDiv maskType={screenX >= 1024 ? "type-2" : "type-1"} size={screenX >= 1024 ? 0.50 : 0.90} className='masked-div2 lg:rotate-180'>
+                    <MaskedDiv maskType={screenX >= 1024 ? "type-2" : "type-1"} size={screenX >= 1024 ? 0.50 : 0.90} className='masked-div2 masked-card lg:rotate-180'>
                         <div className="service bg-[#ADEBB3] p-5 flex flex-col lg:flex-row justify-start lg:justify-between items-start lg:items-center lg:rotate-180">
                             <img className='w-[70%] lg:w-[40%] object-cover' src={ads} alt="" />
                             <div className="service-dets">
@@ -146,7 +163,7 @@ const Services = () => {
                     </MaskedDiv>
                 </div>
                 <div className="service-list-line lg:flex justify-center mt-5 lg:mt-10">
-                    <MaskedDiv maskType={screenX >= 1024 ? "type-4" : "type-1"} size={screenX >= 1024 ? 0.80 : 0.90} className='masked-div3'>
+                    <MaskedDiv maskType={screenX >= 1024 ? "type-4" : "type-1"} size={screenX >= 1024 ? 0.80 : 0.90} className='masked-div3 masked-card'>
                         <div className="service bg-[#ffcdc4] p-5 flex flex-col lg:flex-row justify-start lg:justify-center items-start lg:items-center">
                             <img className='w-[80%] lg:w-[40%] object-cover' src={creative} alt="" />
                             <div className="service-dets lg:w-[57%]">
@@ -157,7 +174,7 @@ const Services = () => {
                     </MaskedDiv>
                 </div>
                 <div className='service-list-line lg:flex justify-center mt-5 lg:mt-10'>
-                    <MaskedDiv maskType={screenX >= 1024 ? "type-4" : "type-1"} size={screenX >= 1024 ? 0.80 : 0.90} className='masked-div4 lg:rotate-180'>
+                    <MaskedDiv maskType={screenX >= 1024 ? "type-4" : "type-1"} size={screenX >= 1024 ? 0.80 : 0.90} className='masked-div4 masked-card lg:rotate-180'>
                         <div className="service bg-[#ffdfc4] p-5 flex flex-col lg:flex-row justify-start lg:justify-center items-start lg:items-center lg:rotate-180">
                             <img className='w-[80%] lg:w-[40%] object-cover' src={marketing2} alt="" />
                             <div className="service-dets lg:w-[57%]">

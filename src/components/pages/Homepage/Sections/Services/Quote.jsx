@@ -33,7 +33,7 @@ const Quote = () => {
       </span>
       <span className="quote-line-container block h-fit overflow-hidden">
         <span className='quote-line flex justify-center leading-none tracking-tight prime-txt pb-2'>
-          really <span className='text-[#e94a00] mx-1.5 lg:mx-4 italic'>good</span> at.<RiDoubleQuotesR className=' text-[1.2rem] lg:text-[4rem]' />
+          really <span className='text-[#ff5100] mx-1.5 lg:mx-4 italic'>good</span> at.<RiDoubleQuotesR className=' text-[1.2rem] lg:text-[4rem]' />
         </span>
       </span>
     </p>
