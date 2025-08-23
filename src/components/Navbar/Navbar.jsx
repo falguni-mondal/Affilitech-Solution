@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom';
 import logo from "../../assets/logo.png"
 import { gsap } from 'gsap';
 
@@ -14,19 +13,19 @@ const Navbar = () => {
         },
         {
             title: "about",
-            link: "/about"
+            link: "#about-section"
         },
         {
             title: "publisher",
-            link: "/publisher"
+            link: "http://affilitechsolutions.offer18.com/m/signup_self_aff"
         },
         {
             title: "advertiser",
-            link: "/advertiser"
+            link: "https://affilitechsolutions.offer18.com/m/signup_self_adv"
         },
         {
             title: "contact us",
-            link: "/contactus"
+            link: "#contact-section"
         }
     ]
 
@@ -58,7 +57,7 @@ const Navbar = () => {
         });
 
         gsap.from("#navbar", {
-            y: "-20vh",
+            y: "-100%",
             duration: 1.5,
             delay: 3.4,
             ease: "power4.out",
@@ -75,7 +74,7 @@ const Navbar = () => {
                     ease: "power3.out",
                 });
 
-            } else if(currentScroll < lastScrollY.current && (lastScrollY.current - currentScroll) === 5) {
+            } else if (currentScroll < lastScrollY.current && (lastScrollY.current - currentScroll) === 5) {
 
                 gsap.to("#navbar", {
                     y: "0%",
@@ -89,7 +88,6 @@ const Navbar = () => {
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-
     }, []);
 
     return (
@@ -102,7 +100,7 @@ const Navbar = () => {
                     {
                         navlinks.map(navlink => (
                             <li key={`${navlink.title}-key`} className='navlink-list-item relative capitalize text-[0.9rem] text-[#000] font-medium hover:text-[#E85D04] transition-all duration-200 leading-none' id='navlink-list-item'>
-                                <Link to={navlink.link}>{navlink.title}</Link>
+                                <a href={navlink.link} target={navlink.title === "publisher" ? "_blank" : navlink.title === "advertiser" ? "_blank" : ""}>{navlink.title}</a>
                             </li>
                         ))
                     }

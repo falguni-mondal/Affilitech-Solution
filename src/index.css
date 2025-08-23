@@ -1,45 +1,54 @@
 @import "tailwindcss";
 
-*{
+* {
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
 }
 
-html, body{
+html,
+body {
   width: 100%;
   height: 100%;
 }
 
-.prime-txt{
+.swiper, .swiper-slide {
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.prime-txt {
   font-family: "Poppins", sans-serif;
 }
 
-.navlink-underline-span{
+.navlink-underline-span {
   position: absolute;
   left: 0;
-  bottom: -3px;   /* distance from text */
+  bottom: -3px;
   height: 2px;
   width: 0%;
   border-radius: 2px;
-  background: #E85D04;
+  background: #e85d04;
 }
 
-.bg-magic{
+.bg-magic {
   transition: all 0.5s ease-in-out;
 }
-.bg-magic-txt{
+.bg-magic-txt {
   transition: all 0.3s ease-in-out;
 }
-.magic-arrow{
+.magic-arrow {
   transition: all 0.3s ease-in-out;
 }
-.bg-magic-container:hover .bg-magic{
+.bg-magic-container:hover .bg-magic {
   scale: 20;
 }
-.bg-magic-container:hover .bg-magic-txt{
+.bg-magic-container:hover .bg-magic-txt {
   color: white;
   font-weight: 700;
 }
-.bg-magic-container:hover .magic-arrow{
+.bg-magic-container:hover .magic-arrow {
   rotate: 20deg;
 }

@@ -5,19 +5,19 @@ import {gsap} from 'gsap'
 const Impact = () => {
     const impacts = [
         {
-            target: 3,
+            target: 4,
             label: "Years of Experience.",
             suffix: "+",
             duration: 0.8
         },
         {
-            target: 80,
+            target: 1000,
             label: "Daily Conversions",
             suffix: "+",
             duration: 2
         },
         {
-            target: 1300,
+            target: 350,
             label: "Publishers",
             suffix: "+",
             duration: 2
@@ -44,10 +44,10 @@ const Impact = () => {
     }, [])
 
     return (
-        <section className='mt-[20vh] p-10 rounded-3xl' id='impact-section'>
-            <h2 className='text-[3rem] font-semibold leading-none tracking-tight'><span className='block p-0 m-0 text-[5rem] font-semibold leading-[3rem] tracking-tight prime-txt'>#Numbers</span> <span className='block leading-none mt-3'>that reflect our true</span> impact.</h2>
+        <section className=' mt-[25vh] lg:mt-[20vh] px-3 lg:p-10 rounded-3xl' id='impact-section'>
+            <h2 className='text-[1.3rem] lg:text-[3rem] font-semibold leading-[1.1rem] lg:leading-none tracking-tight'><span className='block p-0 m-0 text-[2.5rem] lg:text-[5rem] font-semibold lg:leading-[3rem] tracking-tight prime-txt'>#Numbers</span> <span className='block leading-none mt-3'>that reflect our true</span> impact.</h2>
 
-            <div className="impacts w-full flex justify-between mt-[5vh]">
+            <div className="impacts w-full flex flex-col lg:flex-row gap-3 lg:justify-between mt-[3vh] lg:mt-[5vh]">
                 {
                     impacts.map(({ target, label, suffix, duration }) => (
                         <StatCounter target={target} label={label} suffix={suffix} duration={duration} />

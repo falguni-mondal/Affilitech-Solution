@@ -2,11 +2,11 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const PinMarquee = () => {
   const containerRef = useRef(null);
   const textRef = useRef(null);
+
+  const screenX = window.innerWidth;
 
   useEffect(() => {
     const textEl = textRef.current;
@@ -18,30 +18,36 @@ const PinMarquee = () => {
 
     gsap.fromTo(
       textEl,
-      { x: (viewportWidth/6) },
+      { x: (viewportWidth / 6) },
       {
-        x: () => `-${textWidth - (viewportWidth/1.2)}`,
+        x: () => `-${textWidth - (viewportWidth / 1.2)}`,
         ease: "linear",
         scrollTrigger: {
           trigger: containerEl,
-          start: "top: 10%",
-          end: "top: -400%",
+          start: () => screenX >= 1024 ? "top 10%" : "top 5%",
+          end: () => screenX >= 1024 ? "top -400%" : "top -300%",
           scrub: 1,
           pin: true,
-          anticipatePin: 1,
+          pinSpacing: true,
         },
       }
     );
+
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 100);
+    });
   }, []);
 
   return (
     <section
       ref={containerRef}
-      className="w-full h-[80vh] bg-black overflow-hidden flex items-center justify-start mt-[15vh]"
+      className="w-full h-[80vh] bg-black overflow-hidden flex items-center justify-start mt-[10vh] lg:mt-[15vh]"
     >
       <h1
         ref={textRef}
-        className="text-[#ff631a] font-bold whitespace-nowrap text-[25rem]"
+        className="text-[#ff631a] font-bold whitespace-nowrap text-[6rem] lg:text-[25rem]"
       >
         Build. Grow. Succeed.
       </h1>

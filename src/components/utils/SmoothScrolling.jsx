@@ -6,8 +6,7 @@ import Lenis from "lenis";
 import { useEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
-
-function SmoothScrolling ({ children }) {
+function SmoothScrolling({ children }) {
   const lenis = useRef(null);
   useEffect(() => {
     lenis.current = new Lenis({

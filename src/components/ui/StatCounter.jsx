@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+
 const StatCounter = ({
   target,
   duration,
@@ -74,7 +75,7 @@ const StatCounter = ({
   return (
     <div
       ref={wrapperRef}
-      className="flex flex-col items-center justify-center gap-3 p-4"
+      className="flex flex-col items-center justify-center gap-3 p-0"
     >
       <div className="relative" style={{ width: size, height: size }}>
         <svg
@@ -107,11 +108,11 @@ const StatCounter = ({
 
         {/* Number in center */}
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <div className="text-3xl md:text-4xl font-extrabold leading-none">
+          <div className="text-[1.5rem] md:text-4xl font-extrabold leading-none">
             <span ref={numberRef}>0</span>
             {suffix && <span className="ml-1">{suffix}</span>}
           </div>
-          <div className="font-medium opacity-70 mt-1 text-center">
+          <div className="font-medium opacity-70 mt-1 text-center text-[0.95rem]">
             {label}
           </div>
         </div>

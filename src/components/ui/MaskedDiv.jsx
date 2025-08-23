@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useEffect, useRef } from "react"
-import {cn} from "./utils";
 
 const svgPaths = {
   "type-1": {
@@ -94,11 +93,11 @@ const MaskedDiv = ({
     WebkitMaskImage: `url("${svgString}")`,
     maskRepeat: "no-repeat",
     WebkitMaskRepeat: "no-repeat",
-    maskSize: "contain",
-    WebkitMaskSize: "contain",
+    maskSize: "cover",
+    WebkitMaskSize: "cover",
     width: `${size * 100}%`,
     maxWidth: "100%",
-    margin: "0 auto",
+    margin: "0 0",
   }
 
   return (

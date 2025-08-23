@@ -10,17 +10,17 @@ import brand5 from "../../../../assets/brands/icici.png";
 import brand6 from "../../../../assets/brands/indusland.png";
 import brand7 from "../../../../assets/brands/blitz.png";
 import brand8 from "../../../../assets/brands/dhani.png";
-import brand9 from "../../../../assets/brands/dominos.png";
+// import brand9 from "../../../../assets/brands/dominos.png";
 import brand10 from "../../../../assets/brands/equtas.png";
 import brand11 from "../../../../assets/brands/flipkart.png";
-import brand12 from "../../../../assets/brands/frankfinn.png";
+// import brand12 from "../../../../assets/brands/frankfinn.png";
 import brand13 from "../../../../assets/brands/godreg.png";
 import brand14 from "../../../../assets/brands/groww.png";
 import brand15 from "../../../../assets/brands/HDFC.png";
 import brand16 from "../../../../assets/brands/kent.png";
 import brand17 from "../../../../assets/brands/monster.png";
 import brand18 from "../../../../assets/brands/Skill-lync.png";
-import brand19 from "../../../../assets/brands/sunstone.png";
+// import brand19 from "../../../../assets/brands/sunstone.png";
 import brand20 from "../../../../assets/brands/tata-mutual-fund.png";
 import brand21 from "../../../../assets/brands/tvs_sport.png";
 
@@ -29,10 +29,12 @@ const BrandMarquees = () => {
     const marquee2 = useRef(null);
     const marquee3 = useRef(null);
 
+    const screenX = window.innerWidth;
+
     const brands = [
-        [brand1, brand2, brand3, brand4, brand5, brand6, brand7],
-        [brand8, brand9, brand10, brand11, brand12, brand13, brand14],
-        [brand15, brand16, brand17, brand18, brand19, brand20, brand21],
+        [brand1, brand2, brand3, brand4, brand5, brand6],
+        [brand7, brand8, brand10, brand11, brand13, brand14],
+        [brand15, brand16, brand17, brand18, brand20, brand21],
     ];
 
     useEffect(() => {
@@ -42,7 +44,7 @@ const BrandMarquees = () => {
             const distance1 = marquee1.current.scrollWidth / 2;
             tl1 = gsap.to(marquee1.current, {
                 x: -distance1,
-                duration: 30,
+                duration: () => screenX >= 1024 ? 30 : 20,
                 ease: "linear",
                 repeat: -1,
                 modifiers: { x: (x) => (parseFloat(x) % -distance1) + "px" },
@@ -55,7 +57,7 @@ const BrandMarquees = () => {
             tl2.fromTo(
                 marquee2.current,
                 { x: -distance2 },
-                { x: 0, duration: 30, ease: "linear" }
+                { x: 0, duration: () => screenX >= 1024 ? 30 : 20, ease: "linear" }
             );
         }
 
@@ -63,7 +65,7 @@ const BrandMarquees = () => {
             const distance3 = marquee3.current.scrollWidth / 2;
             tl3 = gsap.to(marquee3.current, {
                 x: -distance3,
-                duration: 30,
+                duration: () => screenX >= 1024 ? 30 : 20,
                 ease: "linear",
                 repeat: -1,
                 modifiers: { x: (x) => (parseFloat(x) % -distance3) + "px" },
@@ -83,43 +85,43 @@ const BrandMarquees = () => {
     }, []);
 
     return (
-        <section className="w-full overflow-hidden py-10 px-10 space-y-6 mt-[5vh]" id="brand-marquee-section">
-            <h2 className='text-[3rem] font-semibold leading-none tracking-tight mb-[3vh]'><span className='block p-0 m-0 text-[5rem] font-semibold leading-[3rem] tracking-tight prime-txt'>#Trust</span> matters.</h2>
+        <section className="w-full overflow-hidden py-10 px-3 lg:px-10 space-y-6 mt-[15vh] lg:mt-[5vh]" id="brand-marquee-section">
+            <h2 className='text-[1.3rem] lg:text-[3rem] font-semibold leading-none tracking-tight mb-[3vh]'><span className='block p-0 m-0 text-[2.5rem] lg:text-[5rem] font-semibold lg:leading-[3rem] tracking-tight prime-txt'>#Trust</span> matters.</h2>
 
-            <div className="flex space-x-10 whitespace-nowrap" ref={marquee1}>
-                {[...brands[0], ...brands[0], ...brands[0], ...brands[0]].map(
+            <div className="flex space-x-5 lg:space-x-10 whitespace-nowrap" ref={marquee1}>
+                {[...brands[0], ...brands[0], ...brands[0], ...brands[0], ...brands[0], ...brands[0]].map(
                     (brand, i) => (
                         <img
                             key={i}
                             src={brand}
                             alt={`brand1-${i}`}
-                            className="h-16 w-auto object-contain"
+                            className="h-10 lg:h-16 w-auto object-contain"
                         />
                     )
                 )}
             </div>
 
-            <div className="flex space-x-10 whitespace-nowrap" ref={marquee2}>
-                {[...brands[1], ...brands[1], ...brands[1], ...brands[1]].map(
+            <div className="flex space-x-5 lg:space-x-10 whitespace-nowrap" ref={marquee2}>
+                {[...brands[1], ...brands[1], ...brands[1], ...brands[1], ...brands[1], ...brands[1]].map(
                     (brand, i) => (
                         <img
                             key={i}
                             src={brand}
                             alt={`brand2-${i}`}
-                            className="h-16 w-auto object-contain"
+                            className="h-10 lg:h-16 w-auto object-contain"
                         />
                     )
                 )}
             </div>
 
-            <div className="flex space-x-10 whitespace-nowrap" ref={marquee3}>
-                {[...brands[2], ...brands[2], ...brands[2], ...brands[2]].map(
+            <div className="flex space-x-5 lg:space-x-10 whitespace-nowrap" ref={marquee3}>
+                {[...brands[2], ...brands[2], ...brands[2], ...brands[2], ...brands[2], ...brands[2]].map(
                     (brand, i) => (
                         <img
                             key={i}
                             src={brand}
                             alt={`brand3-${i}`}
-                            className="h-16 w-auto object-contain"
+                            className="h-10 lg:h-16 w-auto object-contain"
                         />
                     )
                 )}
