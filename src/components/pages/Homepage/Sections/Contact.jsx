@@ -26,7 +26,7 @@ const Contact = () => {
                             <a className='w-[2rem] h-[2rem] border border-zinc-500 rounded-full flex justify-center items-center hover:bg-[#f0550d] hover:border-zinc-200 transition-all duration-300' href="https://www.facebook.com/affilitechsolutions" target='_blank'>
                                 <FaFacebookF className='text-[1.2rem]' />
                             </a>
-                            <a className='w-[2rem] h-[2rem] border border-zinc-500 rounded-full flex justify-center items-center hover:bg-[#f0550d] hover:border-zinc-200 transition-all duration-300' href="#" target='_blank'>
+                            <a className='w-[2rem] h-[2rem] border border-zinc-500 rounded-full flex justify-center items-center hover:bg-[#f0550d] hover:border-zinc-200 transition-all duration-300' href="https://x.com/Affilitech_AS?t=6eu8A8o3ur95Sub6xCCmTA&s=08" target='_blank'>
                                 <FaXTwitter className='text-[1.2rem]' />
                             </a>
                             <a className='w-[2rem] h-[2rem] border border-zinc-500 rounded-full flex justify-center items-center hover:bg-[#f0550d] hover:border-zinc-200 transition-all duration-300' href="https://www.linkedin.com/company/affilitechsolutions/" target='_blank'>
