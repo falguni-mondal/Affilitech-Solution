@@ -82,7 +82,7 @@ const Hero = () => {
             >
                 <SwiperSlide className='hero-slide w-full h-full rounded-3xl bg-[#fffac7] px-5 lg:px-10 flex-col-reverse justify-end lg:flex-row' style={{ display: "flex" }}>
                     <div className="left-slide w-full lg:w-[60%] lg:h-full flex flex-col justify-center shrink-0">
-                        <h1 className='prime-txt text-[2.4rem] lg:text-[4.5rem] leading-[2.2rem] lg:leading-[4.2rem] tracking-tight font-bold'><span className='block prime-txt text-[5rem] lg:text-[12rem] leading-none tracking-tighter font-bold text-[#ff7221] mb-2 lg:mb-0'>Leading</span> Digital Marketing Agency.</h1>
+                        <h1 className='prime-txt text-[2.4rem] lg:text-[4.5rem] leading-[2.2rem] lg:leading-[4.2rem] tracking-tight font-bold'><span className='block prime-txt text-[5rem] lg:text-[12rem] leading-none tracking-tighter font-bold text-[#ff7221] mb-2 lg:mb-0'>Leading</span> Digital Marketing Agency</h1>
                         <p className='text-[1.1rem] leading-none tracking-tight font-semibold mt-5'>We Provide Cutting Edge Business Solution In Digital & Performance Marketing.</p>
                     </div>
                     <div className="right-slide w-full lg:w-[40%] flex justify-center items-center">
@@ -91,7 +91,7 @@ const Hero = () => {
                 </SwiperSlide>
                 <SwiperSlide className='hero-slide w-full h-full rounded-3xl bg-[#adebb3] px-5 lg:px-10 flex-col-reverse justify-end lg:flex-row' style={{ display: "flex" }}>
                     <div className="left-slide w-full lg:w-[60%] lg:h-full flex flex-col justify-center shrink-0">
-                        <h1 className='prime-txt text-[2.5rem] lg:text-[4.5rem] leading-[2.2rem] lg:leading-[4.2rem] tracking-tight font-bold'><span className='block prime-txt text-[5rem] lg:text-[12rem] leading-none tracking-tighter font-bold text-[#28c22f]'>Website</span> Development Services.</h1>
+                        <h1 className='prime-txt text-[2.5rem] lg:text-[4.5rem] leading-[2.2rem] lg:leading-[4.2rem] tracking-tight font-bold'><span className='block prime-txt text-[5rem] lg:text-[12rem] leading-none tracking-tighter font-bold text-[#28c22f]'>Website</span> Development Services</h1>
                         <p className='text-[1.1rem] leading-none tracking-tight font-semibold mt-5'>Foremost Web Application Building, Focus on Unique Ideas.</p>
                     </div>
                     <div className="right-slide w-full lg:w-[40%] flex justify-center items-center">
@@ -100,7 +100,7 @@ const Hero = () => {
                 </SwiperSlide>
                 <SwiperSlide className='hero-slide w-full h-full rounded-3xl bg-[#d0d5ff] px-5 lg:px-10 flex-col-reverse justify-end lg:flex-row' style={{ display: "flex" }}>
                     <div className="left-slide w-full lg:w-[60%] lg:h-full flex flex-col justify-center shrink-0">
-                        <h1 className='prime-txt text-[2.5rem] lg:text-[4.5rem] leading-[2.2rem] lg:leading-[4.2rem] tracking-tight font-bold'><span className='block prime-txt text-[5rem] lg:text-[12rem] leading-none tracking-tighter font-bold text-[#6625ff]'>Mobile</span> Advertising Sollutions.</h1>
+                        <h1 className='prime-txt text-[2.5rem] lg:text-[4.5rem] leading-[2.2rem] lg:leading-[4.2rem] tracking-tight font-bold'><span className='block prime-txt text-[5rem] lg:text-[12rem] leading-none tracking-tighter font-bold text-[#6625ff]'>Mobile</span> Advertising Services</h1>
                         <p className='text-[1.050rem] leading-none tracking-tight font-semibold mt-5'>Deliver Quality Impression & Engagement With World Class Technology Resources.</p>
                     </div>
                     <div className="right-slide w-full lg:w-[40%] flex justify-center items-center">

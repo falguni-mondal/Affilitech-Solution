@@ -11,21 +11,21 @@ const Impact = () => {
             duration: 0.8
         },
         {
-            target: 1000,
+            target: 4652,
             label: "Daily Conversions",
             suffix: "+",
             duration: 2
         },
         {
-            target: 350,
-            label: "Publishers",
+            target: 730,
+            label: "Projects Completed",
             suffix: "+",
             duration: 2
         },
         {
-            target: 10,
-            label: "Monthly Traffic",
-            suffix: "M+",
+            target: 486,
+            label: "Happy Clients",
+            suffix: "+",
             duration: 1
         }
     ]

@@ -184,12 +184,12 @@ const About = () => {
                 </div>
             </div>
             <div className="bottom-about mt-5 lg:mt-10 w-full flex lg:justify-between flex-col-reverse lg:flex-row">
-                <ul className="overviews-container mt-[-1.5rem] lg:mt-0 flex lg:flex-col justify-between flex-wrap lg:flex-nowrap w-full lg:w-[35%]">
+                <ul className="overviews-container flex lg:flex-col justify-between flex-wrap lg:flex-nowrap w-full lg:w-[35%]">
                     <li className='flex gap-2 lg:gap-5 h-[60px] lg:h-[70px] w-[45%] lg:w-full mb-5 lg:mb-16'>
                         <img className='w-[60px] lg:w-[70px] aspect-auto object-cover' src={services} alt="" />
                         <div className="overview-ext flex flex-col h-full justify-between">
                             <h3 className="overview-heading text-[1.5rem] lg:text-[2rem] leading-none font-bold text-[#222]">
-                                7+
+                                6+
                             </h3>
                             <p className="overview-body lg:text-[1.3rem] font-medium leading-none tracking-tight text-zinc-700">
                                 Our Services
@@ -226,10 +226,10 @@ const About = () => {
                     </li>
                 </ul>
                 <div className="image-container w-full lg:w-[65%] flex flex-col lg:flex-row justify-between">
-                    <div className="magic-img-container w-[220px] lg:w-[350px] h-[220px] lg:h-[350px] self-start lg:self-auto overflow-hidden parallax-img mt-[-2rem] lg:mt-0">
+                    <div className="magic-img-container w-[220px] lg:w-[350px] h-[220px] lg:h-[350px] self-start lg:self-auto overflow-hidden parallax-img mt-[-1rem] lg:mt-0">
                         <img className='w-full h-full object-cover hover:scale-[1.1] transition-all duration-500 ease-in-out' src={office2} alt="" />
                     </div>
-                    <div className="magic-img-container w-[300px] lg:w-[400px] h-[350px] lg:h-[450px] self-end lg:self-auto overflow-hidden parallax-img2 relative">
+                    <div className="magic-img-container w-[300px] lg:w-[400px] h-[350px] lg:h-[450px] self-end lg:self-auto overflow-hidden parallax-img2 relative mt-[-2rem]">
                         <img className='w-full h-full object-cover hover:scale-[1.1] transition-all duration-500 ease-in-out' src={office} alt="" />
                     </div>
                 </div>

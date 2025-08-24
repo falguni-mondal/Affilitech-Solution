@@ -45,7 +45,7 @@ const Footer = () => {
         <div className="footer-line">
           <h1 className='text-[2.5rem] font-semibold leading-none text-orange-500'>Affilitech Solutions</h1>
           <p className="address w-[30ch] mt-5 lg:mt-10 text-[0.9rem] lg:text-[1rem]">
-            Raghunathpur, Madhupally More, Durgapur-713204, Paschim Bardhamaan, West Bengal.
+            CT Building, 1st Floor, Bhiringi More, near Bus Stand, Benachity, Durgapur-713213, West Bengal.
           </p>
 
           <div className="contact-dets mt-3">
@@ -109,7 +109,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-line lg:pt-3">
-          <h2 className='text-[1.4rem] lg:text-[1.8rem] font-semibold leading-none'>Our Solutions</h2>
+          <h2 className='text-[1.4rem] lg:text-[1.8rem] font-semibold leading-none'>Our Services</h2>
           <div className="text-list-container mt-5 flex flex-col gap-3 select-none">
             <div className="double-txt-wraper w-fit h-[1.2rem] lg:h-[1.6rem] overflow-hidden">
               <div className="double-txt-container w-fit flex flex-col gap-3 lg:text-[1.2rem]">
