@@ -107,7 +107,7 @@ const Services = () => {
     }, [])
 
     return (
-        <section className='w-full px-3 lg:px-10 mt-[10vh] lg:mt-[20vh]' id='services-section'>
+        <section className='w-full px-3 lg:px-10 mt-[10vh] lg:mt-[20vh] scroll-mt-[-50vh]' id='services-section'>
             <div className='service-line w-full h-[2px] bg-black mb-[5vh] lg:mb-[5vh]'></div>
             <div className="services-quote-container mb-[25vh] lg:mb-[30vh] parallax-txt">
                 <Quote />
