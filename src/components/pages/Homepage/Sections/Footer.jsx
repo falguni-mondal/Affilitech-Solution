@@ -165,13 +165,6 @@ const Footer = () => {
       <div className="copyright mt-10 lg:mt-0 flex gap-1 items-center">
         <FaRegCopyright /> Copyright 2025 Affilitech Solutions
       </div>
-      <div className="creator mt-2 flex gap-1">
-        Visit the
-        <a href='https://falguni.netlify.app' target='_blank' className='text-orange-500 underline flex gap-1 items-center'>
-          Site Developer
-          <FiExternalLink />
-        </a>
-      </div>
     </section>
   )
 }
